@@ -8,8 +8,16 @@ public class MinMaxCalculation {
     }
 
     public static int[] findMinMax(int[] nums) {
+
+        int max = Integer.MIN_VALUE;
+
+        for (int num: nums) {
+            if (num > max) {
+                max = num;
+            }
+        }
         
 
-        return new int[]{Integer.MIN_VALUE, Integer.MAX_VALUE};
+        return new int[]{Integer.MIN_VALUE, max};
     }
 }
