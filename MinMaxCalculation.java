@@ -10,9 +10,17 @@ public class MinMaxCalculation {
     }
 
     public static int[] findMinMax(int[] nums) {
+
+        int max = Integer.MIN_VALUE;
+
+        for (int num: nums) {
+            if (num > max) {
+                max = num;
+            }
+        }
         
         int min_num = IntStream.of(nums).min().getAsInt();;
 
-        return new int[]{min_num, Integer.MAX_VALUE};
+        return new int[]{min_num, max};
     }
 }
