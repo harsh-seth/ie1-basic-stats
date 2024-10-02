@@ -1,3 +1,5 @@
+import java.util.stream.IntStream;
+
 public class MinMaxCalculation {
     public static void main(String[] args) {
         System.err.println("Hello World, from Team 48!");
@@ -9,7 +11,8 @@ public class MinMaxCalculation {
 
     public static int[] findMinMax(int[] nums) {
         
+        int min_num = IntStream.of(nums).min().getAsInt();;
 
-        return new int[]{Integer.MIN_VALUE, Integer.MAX_VALUE};
+        return new int[]{min_num, Integer.MAX_VALUE};
     }
 }
